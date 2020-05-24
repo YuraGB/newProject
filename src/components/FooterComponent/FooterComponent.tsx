@@ -17,7 +17,7 @@ const FooterComponent: React.FC = (): JSX.Element => {
     return (
         <footer className={classes.footer}>
             <span>© copyright</span>
-            <a href="#">This project is on the github</a>
+            <a href="https://github.com/YuraGB/newProject">This project is on the Github</a>
         </footer>
     )
 };

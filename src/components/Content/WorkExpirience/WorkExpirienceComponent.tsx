@@ -48,14 +48,14 @@ const work = [
         company: {
             title: "TOV SAUZ",
             period: "06/2015 - 09/2017 ",
-            profession: "accountant"
+            profession: "Accountant"
         }
     },
     {
         company: {
             title: "TOV Terko Auto",
             period: "11/2007 - 08/2014",
-            profession: "accountant"
+            profession: "Accountant"
         }
     }
 ];

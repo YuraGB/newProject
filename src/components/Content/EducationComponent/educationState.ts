@@ -9,7 +9,7 @@ export default [
         url: "https://coursehunter.net/course/udemy-react16-complete-guide",
         description: {
             url: "https://github.com/YuraGB/showtime",
-            title: "github"
+            title: "Github"
         }
     },
     {
@@ -17,7 +17,7 @@ export default [
         url: "https://www.youtube.com/watch?v=7giZGFDGnkc&list=PL55RiY5tL51rG1x02Yyj93iypUuHYXcB_&index=1",
         description: {
             url: "https://github.com/YuraGB/graphqlcourse",
-            title: "github"
+            title: "Github"
         }
     },
     {
@@ -25,7 +25,7 @@ export default [
         url: "https://www.youtube.com/watch?v=qSRrxpdMpVc",
         description: {
             url: "https://github.com/YuraGB/react-native-awesome",
-            title: "github"
+            title: "Github"
         }
     },
     {

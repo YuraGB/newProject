@@ -9,3 +9,7 @@
 .info {
     flex-grow: 1;
 }
+
+.info a {
+    color: cornflowerblue;
+}
