@@ -1,0 +1,54 @@
+.List {
+    list-style: none;
+    padding: 0;
+}
+
+.title {
+    width: 40%;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.projects {
+    padding: 0 0 1em 0;
+}
+
+.subTitle {
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.projects ul li {
+    padding: 1em 0;
+    border-bottom: 1px solid black;
+}
+
+.role,
+.url {
+    width: 50%;
+    display: inline-block;
+    padding: 0 1em 0 0;
+    box-sizing: border-box;
+}
+
+.url {
+    text-decoration: none;
+    cursor: pointer;
+    color: cadetblue;
+}
+
+.period {
+    display: inline-block;
+}

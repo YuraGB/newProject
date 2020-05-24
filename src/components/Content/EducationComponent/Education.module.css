@@ -1,0 +1,11 @@
+.title a {
+    color: #5651ff;
+}
+
+.title {
+    width: 50%;
+}
+
+.info {
+    flex-grow: 1;
+}

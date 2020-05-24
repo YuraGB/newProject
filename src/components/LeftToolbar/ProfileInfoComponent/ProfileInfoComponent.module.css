@@ -1,0 +1,10 @@
+.InfoArea {
+    box-sizing: border-box;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.InfoArea h5 {
+    margin-bottom: 1em;
+    font-size: 16px;
+}

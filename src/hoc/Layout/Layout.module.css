@@ -1,0 +1,13 @@
+.Main {
+    max-width: 1025px;
+    margin: 5vh auto;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px black;
+    background-color: white;
+    min-height: 90vh;
+
+    display: grid;
+    grid-template-areas: "toolbar content";
+    grid-template-rows: 1fr;
+    grid-template-columns: 40% 1fr;
+}
