@@ -1,3 +1,13 @@
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .footer {
+        flex-wrap: wrap;
+    }
+}
+
+/* Common*/
 .footer {
     display: flex;
     width: 100%;
@@ -6,4 +16,5 @@
 
 .footer a {
     color: grey;
+    font-size: 12px;
 }

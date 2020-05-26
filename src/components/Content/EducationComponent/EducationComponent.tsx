@@ -17,9 +17,9 @@ import education from './educationState';
  * @return {*} JSX.Element
  */
 const EducationComponent: React.FC = (): JSX.Element => {
-    const list = education.map((el, ind) => {
+    const list = education.map((el) => {
         return (
-            <ListItemComponent link={el.url} subStyles={classes.title} title={el.title}>
+            <ListItemComponent key={el.title} link={el.url} subStyles={classes.title} title={el.title}>
                 <div className={classes.info}>
                     {typeof el.description === 'string' ?
                         <span>{el.description}</span> :

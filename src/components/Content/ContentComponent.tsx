@@ -9,9 +9,9 @@ import React from 'react';
 import classes from './ContentComponent.module.css'
 import AboutMeComponent from "./AboutMeComponent/AboutMeComponent";
 import SkillsComponent from "./SkillsComponent/SkillsComponent";
-import FramworksComponent from "./Frameworks/FramworksComponent";
 import WorkExpirienceComponent from "./WorkExpirience/WorkExpirienceComponent";
 import EducationComponent from "./EducationComponent/EducationComponent";
+import FooterComponent from "../FooterComponent/FooterComponent";
 
 /**
  * ContentComponent
@@ -23,9 +23,9 @@ const ContentComponent:React.FC = (): JSX.Element => {
         <section className={classes.Content}>
             <AboutMeComponent />
             <SkillsComponent />
-            <FramworksComponent />
             <WorkExpirienceComponent />
             <EducationComponent />
+            <FooterComponent />
         </section>
     )
 };

@@ -31,7 +31,7 @@ const PersonalContactInfo: React.FC = (): JSX.Element => {
 
     for (let [key, value] of Object.entries(personalInfo)) {
         list.push(
-            <ListItemComponent title={key} subStyles={classes.title}>
+            <ListItemComponent key={key} title={key} subStyles={classes.title}>
                 <div className={classes.info}>
                     <span>{value}</span>
                 </div>

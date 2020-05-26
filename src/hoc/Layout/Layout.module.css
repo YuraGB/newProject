@@ -1,13 +1,73 @@
 .Main {
-    max-width: 1025px;
-    margin: 5vh auto;
+    max-width: 210mm;
+    margin: 1vh auto;
     box-sizing: border-box;
     box-shadow: 1px 1px 10px black;
     background-color: white;
     min-height: 90vh;
-
     display: grid;
     grid-template-areas: "toolbar content";
     grid-template-rows: 1fr;
     grid-template-columns: 40% 1fr;
+}
+
+/*Mobile*/
+
+@media (max-width: 768px) {
+    .Main {
+        grid-template-areas: "content";
+        grid-template-columns: 100%;
+        margin: 0;
+    }
+
+    .print_wrapper {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    main.Main {
+        max-width: 210mm;
+        margin: 1vh auto;
+        box-sizing: border-box;
+        box-shadow: 1px 1px 10px black;
+        background-color: white;
+        min-height: 90vh;
+
+        display: grid;
+        grid-template-areas: "toolbar content";
+        grid-template-rows: 1fr;
+        grid-template-columns: 40% 1fr;
+    }
+
+    .to_print {
+        display: inline;
+        margin: auto;
+        width: auto;
+        padding: 5px 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        color: grey;
+        text-decoration: none;
+        box-shadow: 1px 1px 5px black;
+    }
+
+    .print_wrapper {
+        text-align: left;
+        position: sticky;
+        width: 100%;
+        padding: 15px;
+        top: 0;
+        display: inline;
+        z-index: 5;
+    }
+}
+
+/*print strange behavior*/
+@media (max-width: 300px) {
+    .Main {
+        grid-template-areas: "toolbar content";
+        grid-template-rows: 1fr;
+        grid-template-columns: 40% 1fr;
+    }
 }

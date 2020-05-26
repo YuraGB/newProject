@@ -52,3 +52,11 @@ ul {
 .period {
     display: inline-block;
 }
+
+.stack {
+    font-weight: bold;
+}
+
+.subTitle {
+    font-weight: normal;
+}

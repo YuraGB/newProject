@@ -21,9 +21,9 @@ const SkillsComponent: React.FC = (): JSX.Element => {
 
     for (let [key, value] of Object.entries(skills)) {
         list.push(
-            <ListItemComponent title={key}>
+            <ListItemComponent key={key} title={key} subStyles={classes.title}>
                 <div className={classes.info}>
-                    <progress id="file" max="5" value={value}></progress>
+                    <span>{value}</span>
                 </div>
             </ListItemComponent>
         );
@@ -34,6 +34,8 @@ const SkillsComponent: React.FC = (): JSX.Element => {
             <ul className={classes.Skills}>
                 {list}
             </ul>
+            <h5>Familiar</h5>
+            <p>Canvas, Svg, Angular(5), React-Native</p>
         </ContentSection>
     )
 };

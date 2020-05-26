@@ -1,3 +1,16 @@
 .Content {
-    padding: 5em 2em 2em;
+    padding: 5em 1em 2em;
+    background-color: white;
+}
+
+@media print {
+    .Content {
+        padding: 5em 1em 1em;
+    }
+}
+
+@media (min-width: 768px) {
+    .Content footer {
+        display: none;
+    }
 }

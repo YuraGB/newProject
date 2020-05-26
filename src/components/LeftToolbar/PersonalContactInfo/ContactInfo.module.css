@@ -17,3 +17,9 @@
 .title {
     color: grey;
 }
+
+@media print {
+    .info {
+        padding-left: 5px;
+    }
+}

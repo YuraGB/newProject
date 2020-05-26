@@ -1,14 +1,8 @@
 export default {
-    Github: 4,
-    ES5: 4,
-    ES6: 4,
-    MongoDB: 3,
-    Nodejs: 3,
-    Linux: 3,
-    Webpack: 4,
-    HTML: 4,
-    CSS_LESS_SCSS_PostCSS: 4,
-    GraphQL: 3,
-    AdobeIllustrator: 3,
-    Typescript: 4
+    "Version Control": "GitHub, GitLab.",
+    "JavaScript": "ES5, ES6, Nodejs, Mongoose, Webpack,    Express, Mongoose, React, Jquery, Jquery-UI, React-Redux, React-Saga, Thunk, Magento 2, Passportjs, GraphQL.",
+    "Issue tracking": "Redmind.",
+    "Communication tool": "Mattermost, Skipe, Mail.",
+    "Database Management": "MongoDB.",
+    "Others": "TypeScript, HTML, CSS3, CSS preprocessors."
 };

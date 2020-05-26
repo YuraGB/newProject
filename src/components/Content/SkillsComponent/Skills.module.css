@@ -5,4 +5,11 @@
 
 .info {
     flex-grow: 1;
+    max-width: 50%;
+}
+
+.title {
+    text-decoration: underline;
+    width: 50%;
+    min-width: auto;
 }
