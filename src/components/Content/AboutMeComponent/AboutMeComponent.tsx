@@ -16,8 +16,8 @@ const AboutMeComponent:React.FC = (): JSX.Element => {
     return (
         <ContentSection title="About Me">
             <p>
-                Front-end web developer with over 2 years of experience in e-commerce projects. My
-                greatest strength is a responsibility, teamwork, desire to learn.
+                Front-end web developer with over 4 years of experience in e-commerce projects. My
+                greatest strength is a responsibility, teamwork, hard-worker.
             </p>
         </ContentSection>
     )

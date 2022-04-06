@@ -1,40 +1,72 @@
 export default [
     {
         company: {
+            title: "Yael Acceptics",
+            profession: "Front-end developer",
+            period: "03/2021 - till now.",
+            projects: [
+                {
+                    url: "https://aldom2.stg.fisha.cloud/",
+                    role: 'front-end developer',
+                    description: `Team: 3/1 front-end developers, 2 back-end developers, 1 PM`,
+                    Tech_stack: `React. Frontend for WEB`
+                },
+                {
+                    url: "https://www.femina.co.il/",
+                    role: 'front-end developer',
+                    description: `Team: 3 front-end developers, 2 back-end developers, 1 PM`,
+                    Tech_stack: `Magento modules creation. Development of UI behavioral. Development static pages.`
+                },
+                {
+                    url: "https://www.vans.co.il/",
+                    role: 'front-end developer',
+                    description: `1 front-end developers, 1 back-end developers, 1 PM, 1 QA.`,
+                    Tech_stack: `Magento modules creation. Development of UI behavioral. Development static pages.`
+                },                {
+                    url: "https://www.femina.co.il/",
+                    role: 'front-end developer',
+                    description: `Team: 3 front-end developers, 2 back-end developers, 1 PM`,
+                    Tech_stack: `Magento modules creation. Development of UI behavioral. Development static pages.`
+                },
+                {
+                    url: "https://www.narscosmetics.co.il/",
+                    role: 'front-end developer',
+                    description: `Team: 3 front-end developers, 2 back-end developers, 1 PM`,
+                    Tech_stack: `Magento modules creation. Development of UI behavioral. Development static pages.`
+                },
+            ],
+        }
+    },
+    {
+        company: {
             title: "Smile",
             profession: "Front-end developer",
-            period: "03/2018 - till now.",
+            period: "03/2018 - 03/2021",
             projects: [
                 {
                     url: 'https://www.maxitoys.com/',
                     role: 'front-end developer',
                     description: `Team: 3 front-end developers, 2 back-end developers, 1 PM, 2 testers`,
-                    Tech_stack: `Magento modules creation, styles for multiple elements, fixing front-end bugs,
-                     js-widgets creating, working with knokoutjs.`
+                    Tech_stack: `Magento modules creation. Development of UI behavioral.`
 
                 },
                 {
                     url: 'https://www.editions-legislatives.fr/',
                     role: 'front-end developer',
                     description: `Team: 2 front-end developers, 3 back-end developers, 1 PM, 2 testers.`,
-                    Tech_stack: `Magento modules creation, styles for multiple elements, fixing front-end bugs,
-                     js-widgets creating, working with knokoutjs.`
+                    Tech_stack: `Magento modules creation. Development of UI behavioral.`
                 },
                 {
                     url: 'https://www.alimentarium.org/en',
                     role: 'front-end developer',
                     description: `Team: 2 front-end developers, 1 back-end developers, 1 PM, 2 testers.`,
-                    Tech_stack: `Drupal 7 re-design front-end development, styles for multiple elements, 
-                     fixing front-end bugs.`
+                    Tech_stack: `Drupal 7 re-design front-end development.`
                 },
                 {
                     url: 'https://www.obrist.ch/fr',
                     role: 'front-end developer',
-                    description: `
-                    NOTE: The development of the web site is still in progress. This is an 'old' url of the web site.
-                    Team: 2 front-end developers, 2 back-end developers, 1 PM, 2 testers.`,
-                    Tech_stack: `Magento modules creation, styles for multiple elements, fixing front-end bugs,
-                     js-widgets creating, working with knokoutjs.`
+                    description: `Team: 2 front-end developers, 2 back-end developers, 1 PM, 2 testers.`,
+                    Tech_stack: `Magento modules creation. Development of UI behavioral.`
                 }
             ]
         }
