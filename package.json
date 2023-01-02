@@ -14,7 +14,7 @@
     "jspdf": "^1.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "react-to-print": "^2.8.0",
     "social-media-icons-react": "^1.0.10",
     "typescript": "^3.7.5"
