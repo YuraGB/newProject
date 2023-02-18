@@ -6,32 +6,33 @@ export default [
             period: "03/2021 - till now.",
             projects: [
                 {
-                    url: "https://aldom2.stg.fisha.cloud/",
+                    url: "https://mcprod.dutyfree.co.il/",
                     role: 'front-end developer',
-                    description: `Team: 3/1 front-end developers, 2 back-end developers, 1 PM`,
+                    description: `Achievements : Development React components. Styling. Creating JS logic. Creating/improving user interfaces`,
+                    Tech_stack: `React. Frontend for WEB`
+                },
+                {
+                    url: "https://www.aldoshoes.co.il/",
+                    role: 'front-end developer',
+                    description: `Achievements : Development React components. Styling. Creating JS logic. Creating/improving user interfaces`,
                     Tech_stack: `React. Frontend for WEB`
                 },
                 {
                     url: "https://www.femina.co.il/",
                     role: 'front-end developer',
-                    description: `Team: 3 front-end developers, 2 back-end developers, 1 PM`,
+                    description: `Achievements: Development Magento 2 modules. Styling. Creating JS logic. Creating/improving user interfaces`,
                     Tech_stack: `Magento modules creation. Development of UI behavioral. Development static pages.`
                 },
                 {
                     url: "https://www.vans.co.il/",
                     role: 'front-end developer',
-                    description: `1 front-end developers, 1 back-end developers, 1 PM, 1 QA.`,
-                    Tech_stack: `Magento modules creation. Development of UI behavioral. Development static pages.`
-                },                {
-                    url: "https://www.femina.co.il/",
-                    role: 'front-end developer',
-                    description: `Team: 3 front-end developers, 2 back-end developers, 1 PM`,
+                    description: `Achievements: Development Magento 2 modules. Styling. Creating JS logic. Creating/improving user interfaces`,
                     Tech_stack: `Magento modules creation. Development of UI behavioral. Development static pages.`
                 },
                 {
                     url: "https://www.narscosmetics.co.il/",
                     role: 'front-end developer',
-                    description: `Team: 3 front-end developers, 2 back-end developers, 1 PM`,
+                    description: `Achievements: Development Magento 2 modules. Styling. Creating JS logic. Creating/improving user interfaces`,
                     Tech_stack: `Magento modules creation. Development of UI behavioral. Development static pages.`
                 },
             ],
@@ -46,26 +47,26 @@ export default [
                 {
                     url: 'https://www.maxitoys.com/',
                     role: 'front-end developer',
-                    description: `Team: 3 front-end developers, 2 back-end developers, 1 PM, 2 testers`,
+                    description: `Achievements: Development Magento 2 modules. Styling. Creating JS logic. Creating/improving user interfaces`,
                     Tech_stack: `Magento modules creation. Development of UI behavioral.`
 
                 },
                 {
                     url: 'https://www.editions-legislatives.fr/',
                     role: 'front-end developer',
-                    description: `Team: 2 front-end developers, 3 back-end developers, 1 PM, 2 testers.`,
+                    description: `Achievements: Development Magento 2 modules. Styling. Creating JS logic. Creating/improving user interfaces`,
                     Tech_stack: `Magento modules creation. Development of UI behavioral.`
                 },
                 {
                     url: 'https://www.alimentarium.org/en',
                     role: 'front-end developer',
-                    description: `Team: 2 front-end developers, 1 back-end developers, 1 PM, 2 testers.`,
+                    description: `Achievements: Development Magento 2 modules. Styling. Creating JS logic. Creating/improving user interfaces`,
                     Tech_stack: `Drupal 7 re-design front-end development.`
                 },
                 {
                     url: 'https://www.obrist.ch/fr',
                     role: 'front-end developer',
-                    description: `Team: 2 front-end developers, 2 back-end developers, 1 PM, 2 testers.`,
+                    description: `Achievements: Development Magento 2 modules. Styling. Creating JS logic. Creating/improving user interfaces`,
                     Tech_stack: `Magento modules creation. Development of UI behavioral.`
                 }
             ]
