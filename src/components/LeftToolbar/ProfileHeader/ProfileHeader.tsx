@@ -19,7 +19,7 @@ const ProfileHeader: React.FC = (): JSX.Element => {
         <section className={classes.Header}>
             <img src={profileImg} alt="yuhur_img"/>
             <h3>Yurii Hurianov</h3>
-            <h5>Front-end developer</h5>
+            <h5>Front-end developer | JavaScript, ReactJS, NodeJS, HTML5, CSS3, Less Cass PostCss</h5>
         </section>
     )
 };
