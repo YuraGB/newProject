@@ -10,13 +10,14 @@ import classes from './LeftToolbar.module.css';
 import ProfileHeader from "./ProfileHeader/ProfileHeader";
 import ProfileInfoComponent from "./ProfileInfoComponent/ProfileInfoComponent";
 import FooterComponent from "../FooterComponent/FooterComponent";
+import {ContainerProps} from "../../hoc/types";
 
 /**
  * LeftToolbar
  *
  * @return {*} JSX.Element
  */
-const LeftToolbar:React.FC = (): JSX.Element => {
+const LeftToolbar:React.FC<ContainerProps> = (props): JSX.Element => {
     return (
         <section className={classes.Toolbar}>
             <ProfileHeader />
