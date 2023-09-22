@@ -1,24 +1,38 @@
-import Resume from '../../DataBase'
-import { useMemo, useState } from 'react'
+import Resume from "../../DataBase";
+import { useMemo, useState } from "react";
+import * as string_decoder from "string_decoder";
 
-export type blockNames = ''
+export type BlockNames =
+  | "Education"
+  | "Languages"
+  | "about_me"
+  | "contact_info"
+  | "profile"
+  | "skills"
+  | "social_links"
+  | "work_experience";
 
-// export interface resumeBlock {
-//
-// }
+export type BlockDefault = {
+  [key: string]: string;
+};
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+export type ResumeBlocks = {
+  [key in BlockNames]: BlockDefault | string;
+};
+
 export const useContent = () => {
-  const [blocks, setBlocks] = useState(null)
+  const [blocks, setBlocks] = useState<ResumeBlocks | string | null>(null);
   void useMemo(async () => {
-    const getBlocks = await Resume
+    const getBlocks: string | ResumeBlocks[] = await Resume;
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    if (getBlocks?.length) {
-      setBlocks(getBlocks[0])
+    if (Array.isArray(getBlocks)) {
+      setBlocks(getBlocks[0]);
     }
-  },
-  [])
 
-  return {blocks}
-}
+    if (typeof getBlocks === "string") {
+      setBlocks(getBlocks);
+    }
+  }, []);
+
+  return { blocks };
+};

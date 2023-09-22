@@ -5,7 +5,7 @@
  * @copyright 2020
  */
 import React from "react";
-import {ContainerProps} from "../types";
+import { ContainerProps } from "../types";
 
 /**
  * Auxx hire order component
@@ -14,6 +14,8 @@ import {ContainerProps} from "../types";
  * @return {*} children of the component
  * @constructor
  */
-const Auxx:React.FC<ContainerProps> = (props: JSX.Element | JSX.Element[] | any) => props.children;
+const Auxx: React.FC<ContainerProps> = ({
+  children,
+}: ContainerProps): React.ReactNode | React.ReactNode[] => children;
 
 export default Auxx;

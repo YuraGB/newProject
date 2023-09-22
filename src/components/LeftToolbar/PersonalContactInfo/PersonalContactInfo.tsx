@@ -27,9 +27,9 @@ const personalInfo: IContactInfo =
  * @return {*} JSX.Element
  */
 const PersonalContactInfo: React.FC = (): JSX.Element => {
-    let list = [];
+    const list = [];
 
-    for (let [key, value] of Object.entries(personalInfo)) {
+    for (const [key, value] of Object.entries(personalInfo)) {
         list.push(
             <ListItemComponent key={key} title={key} subStyles={classes.title}>
                 <div className={classes.info}>

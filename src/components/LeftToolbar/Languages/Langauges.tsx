@@ -26,9 +26,9 @@ const languagesData: ILanguages =
  * @return {*} JSX.Element
  */
 const Languages: React.FC = (): JSX.Element => {
-    let list = [];
+    const list = [];
 
-    for (let [key, value] of Object.entries(languagesData)) {
+    for (const [key, value] of Object.entries(languagesData)) {
         list.push(
             <ListItemComponent key={key} title={key} subStyles={classes.title}>
                 <div className={classes.info}>

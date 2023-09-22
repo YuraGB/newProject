@@ -17,9 +17,9 @@ import skills from './skillsState';
  * @return {*} JSX.Element
  */
 const SkillsComponent: React.FC = (): JSX.Element => {
-    let list = [];
+    const list = [];
 
-    for (let [key, value] of Object.entries(skills)) {
+    for (const [key, value] of Object.entries(skills)) {
         list.push(
             <ListItemComponent key={key} title={key} subStyles={classes.title}>
                 <div className={classes.info}>
