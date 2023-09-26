@@ -1,17 +1,29 @@
-import React from 'react';
-import { SocialIcon } from 'react-social-icons';
+import React, { useMemo } from "react";
+import { SocialIcon } from "react-social-icons";
 
-import classes from './SocialsComponent.module.css';
+import classes from "./SocialsComponent.module.css";
+import { IResumeBlocks } from "../../Content/useContent";
 
-const SocialsComponent: React.FC = (): JSX.Element => {
-    return (
-        <section className={classes.socials}>
-            <SocialIcon network="facebook"  url="http://facebook.com/yura.gurianov"/>
-            <SocialIcon network="github"  url="https://github.com/YuraGB"/>
-            <SocialIcon network="linkedin"  url="https://www.linkedin.com/in/yurii-hurianov-685373172/"/>
-            <SocialIcon network="stackoverflow"  url="https://stackoverflow.com/users/7454797/gorr1995?tab=profile"/>
-        </section>
-    )
+const SocialsComponent: React.FC<IResumeBlocks> = ({
+  social_links,
+}): JSX.Element | null => {
+  const list = useMemo(() => {
+    const array: JSX.Element[] = [];
+
+    if (social_links) {
+      for (const [network, url] of Object.entries(social_links)) {
+        array.push(<SocialIcon network={network} url={url} key={url} />);
+      }
+    }
+
+    return array;
+  }, [social_links]);
+
+  if (!social_links) {
+    return null;
+  }
+
+  return <section className={classes.socials}>{list}</section>;
 };
 
 export default SocialsComponent;

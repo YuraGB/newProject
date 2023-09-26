@@ -12,9 +12,7 @@ import Auxx from "../Auxx/Auxx";
 import classes from "./Layout.module.css";
 import LeftToolbar from "../../components/LeftToolbar/LeftToolbar";
 import { ContainerProps } from "../types";
-import { useContent } from "../../components/Content/useContent";
-import SpinnerComponent from "../../components/Spinner/SpinnerComponent";
-import NotFoundComponent from "../../components/Content/NotFoundComponent/NotFoundComponent";
+import { PropsResumeBlocks } from "../../components/Content/useContent";
 
 /**
  * Layout hire order component
@@ -22,18 +20,11 @@ import NotFoundComponent from "../../components/Content/NotFoundComponent/NotFou
  * @param props
  * @author Yurii Huriianov <yuhur1985@gmail.com
  */
-const Layout: React.FC<ContainerProps> = (props): JSX.Element => {
+const Layout: React.FC<ContainerProps & PropsResumeBlocks> = ({
+  children,
+  blocks,
+}): JSX.Element => {
   const ref = useRef<HTMLElement | null>(null);
-
-  const { blocks } = useContent();
-
-  if (!blocks) {
-    return <SpinnerComponent />;
-  }
-
-  if (typeof blocks === "string") {
-    return <NotFoundComponent />;
-  }
 
   return (
     <Auxx>
@@ -52,8 +43,8 @@ const Layout: React.FC<ContainerProps> = (props): JSX.Element => {
         bodyClass={classes.print}
       />
       <main ref={ref} className={classes.Main}>
-        <LeftToolbar />
-        {props.children}
+        <LeftToolbar blocks={blocks} />
+        {children}
       </main>
     </Auxx>
   );

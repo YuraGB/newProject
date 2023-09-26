@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { collection, getDocs, getFirestore } from "firebase/firestore/lite";
 import { type FireBaseConfigType } from "./Model/Types";
 import { type Firestore } from "@firebase/firestore";
-import { ResumeBlocks } from "../components/Content/useContent";
+import { IResumeBlocks } from "../components/Content/useContent";
 
 // web app Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -22,7 +22,7 @@ const firebaseConfig: FireBaseConfigType = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-async function getResume(db: Firestore): Promise<ResumeBlocks[] | string> {
+async function getResume(db: Firestore): Promise<IResumeBlocks[] | string> {
   const resume = collection(db, "resume");
 
   try {
@@ -31,7 +31,7 @@ async function getResume(db: Firestore): Promise<ResumeBlocks[] | string> {
     if (resumeFieldsData?.docs?.length) {
       return resumeFieldsData.docs.map((resumeField) =>
         resumeField.data()
-      ) as ResumeBlocks[];
+      ) as IResumeBlocks[];
     }
 
     return "there is no data from the server";

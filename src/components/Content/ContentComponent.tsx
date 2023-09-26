@@ -13,19 +13,23 @@ import EducationComponent from "./EducationComponent/EducationComponent";
 import FooterComponent from "../FooterComponent/FooterComponent";
 
 import classes from "./ContentComponent.module.css";
+import { PropsResumeBlocks } from "./useContent";
 
 /**
  * ContentComponent
  *
  * @return {*} JSX.Element
  */
-const ContentComponent: React.FC = (): JSX.Element => {
+const ContentComponent: React.FC<PropsResumeBlocks> = ({
+  blocks,
+}): JSX.Element => {
+  const { about_me, skills, work_experience, Education } = blocks;
   return (
     <section className={classes.Content}>
-      <AboutMeComponent />
-      <SkillsComponent />
-      <WorkExpirienceComponent />
-      <EducationComponent />
+      <AboutMeComponent about_me={about_me} />
+      <SkillsComponent skills={skills} />
+      <WorkExpirienceComponent work_experience={work_experience} />
+      <EducationComponent Education={Education} />
       <FooterComponent />
     </section>
   );
