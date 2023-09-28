@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React from "react";
+import React, { ReactElement } from "react";
 
 import classes from "./NotFoundComponent.module.css";
 
@@ -13,7 +13,7 @@ import classes from "./NotFoundComponent.module.css";
  *
  * @return {*} JSX.Element
  */
-const NotFoundComponent: React.FC = (): JSX.Element => {
+const NotFoundComponent: React.FC = (): ReactElement => {
   return (
     <section className={classes.root}>
       <h1>Sorry, there is some problems with the server.</h1>

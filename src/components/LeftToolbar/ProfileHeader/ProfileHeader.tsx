@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React from "react";
+import React, { ReactElement } from "react";
 
 import classes from "./ProfileHeader.module.css";
 import profileImg from "../../../assets/images/profile.jpg";
@@ -16,18 +16,18 @@ import { IResumeBlocks } from "../../Content/useContent";
  *
  * @return {*} JSX.Element
  */
-const ProfileHeader: React.FC<ContainerProps & IResumeBlocks> = ({
+const ProfileHeader: React.FC<ContainerProps & Partial<IResumeBlocks>> = ({
   profile,
-}): JSX.Element => {
-  console.log(profile);
+}): ReactElement | null => {
+  if (!profile) {
+    return null;
+  }
+  const { first_name = "", last_name = "", sub_title = "" } = profile;
   return (
     <section className={classes.Header}>
       <img src={profileImg} alt="yuhur_img" />
-      <h3>Yurii Hurianov</h3>
-      <h5>
-        Front-end developer | JavaScript, ReactJS, NodeJS, HTML5, CSS3, Less
-        Cass PostCss
-      </h5>
+      <h1>{`${first_name} ${last_name}`}</h1>
+      <h5>{sub_title}</h5>
     </section>
   );
 };

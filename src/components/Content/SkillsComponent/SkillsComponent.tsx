@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React, { useMemo } from "react";
+import React, { ReactElement, useMemo } from "react";
 
 import classes from "./Skills.module.css";
 import ContentSection from "../ContentSection/ContentSection";
@@ -19,7 +19,7 @@ import { ContainerProps } from "../../../hoc/types";
  */
 const SkillsComponent: React.FC<ContainerProps & Partial<IResumeBlocks>> = ({
   skills,
-}): JSX.Element => {
+}): ReactElement => {
   const list = useMemo(() => {
     const array = [];
 
@@ -41,8 +41,6 @@ const SkillsComponent: React.FC<ContainerProps & Partial<IResumeBlocks>> = ({
   return (
     <ContentSection title="Skills">
       <ul className={classes.Skills}>{list}</ul>
-      <h5>Familiar</h5>
-      <p>Canvas, Svg, Angular(5), React-Native</p>
     </ContentSection>
   );
 };

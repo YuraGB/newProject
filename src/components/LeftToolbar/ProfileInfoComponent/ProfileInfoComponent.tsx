@@ -18,11 +18,9 @@ import { IResumeBlocks } from "../../Content/useContent";
  *
  * @return {*} JSX.Element
  */
-const ProfileInfoComponent: React.FC<ContainerProps & IResumeBlocks> = ({
-  Languages,
-  contact_info,
-  social_links,
-}): JSX.Element => {
+const ProfileInfoComponent: React.FC<
+  ContainerProps & Partial<IResumeBlocks>
+> = ({ Languages, contact_info, social_links }): JSX.Element => {
   return (
     <section className={classes.InfoArea}>
       <h5>Languages</h5>

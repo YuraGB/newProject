@@ -5,7 +5,7 @@
  * @copyright 2020
  */
 
-import React, { useRef } from "react";
+import React, { ReactElement, useRef } from "react";
 import ReactToPrint from "react-to-print";
 
 import Auxx from "../Auxx/Auxx";
@@ -23,7 +23,7 @@ import { PropsResumeBlocks } from "../../components/Content/useContent";
 const Layout: React.FC<ContainerProps & PropsResumeBlocks> = ({
   children,
   blocks,
-}): JSX.Element => {
+}): ReactElement => {
   const ref = useRef<HTMLElement | null>(null);
 
   return (

@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React from "react";
+import React, { ReactElement } from "react";
 
 import "./App.css";
 import Layout from "../Layout/Layout";
@@ -19,7 +19,7 @@ import NotFoundComponent from "../../components/Content/NotFoundComponent/NotFou
  *
  * @return {*} JSX.Element
  */
-const App: React.FC<ContainerProps> = (): JSX.Element => {
+const App: React.FC<ContainerProps> = (): ReactElement => {
   const { blocks } = useContent();
 
   if (!blocks) {

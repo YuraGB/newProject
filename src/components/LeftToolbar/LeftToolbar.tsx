@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React from "react";
+import React, { ReactElement } from "react";
 
 import classes from "./LeftToolbar.module.css";
 import ProfileHeader from "./ProfileHeader/ProfileHeader";
@@ -20,7 +20,7 @@ import { PropsResumeBlocks } from "../Content/useContent";
  */
 const LeftToolbar: React.FC<ContainerProps & PropsResumeBlocks> = ({
   blocks,
-}): JSX.Element | null => {
+}): ReactElement | null => {
   if (!blocks) {
     return null;
   }

@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React from "react";
+import React, { ReactElement } from "react";
 
 import AboutMeComponent from "./AboutMeComponent/AboutMeComponent";
 import SkillsComponent from "./SkillsComponent/SkillsComponent";
@@ -22,7 +22,7 @@ import { PropsResumeBlocks } from "./useContent";
  */
 const ContentComponent: React.FC<PropsResumeBlocks> = ({
   blocks,
-}): JSX.Element => {
+}): ReactElement => {
   const { about_me, skills, work_experience, Education } = blocks;
   return (
     <section className={classes.Content}>

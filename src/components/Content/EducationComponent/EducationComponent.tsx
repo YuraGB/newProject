@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React, { useMemo } from "react";
+import React, { ReactElement, useMemo } from "react";
 
 import ContentSection from "../ContentSection/ContentSection";
 import ListItemComponent from "../../ListComponent/ListComponent";
@@ -17,9 +17,9 @@ import { ContainerProps } from "../../../hoc/types";
  *
  * @return {*} JSX.Element
  */
-const EducationComponent: React.FC<ContainerProps & IResumeBlocks> = ({
+const EducationComponent: React.FC<ContainerProps & Partial<IResumeBlocks>> = ({
   Education,
-}): JSX.Element | null => {
+}): ReactElement | null => {
   const list = useMemo(() => {
     if (Array.isArray(Education)) {
       return Education.map((el) => {

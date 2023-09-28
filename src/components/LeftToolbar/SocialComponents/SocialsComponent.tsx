@@ -4,7 +4,7 @@ import { SocialIcon } from "react-social-icons";
 import classes from "./SocialsComponent.module.css";
 import { IResumeBlocks } from "../../Content/useContent";
 
-const SocialsComponent: React.FC<IResumeBlocks> = ({
+const SocialsComponent: React.FC<Partial<IResumeBlocks>> = ({
   social_links,
 }): JSX.Element | null => {
   const list = useMemo(() => {

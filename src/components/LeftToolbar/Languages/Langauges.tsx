@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React, { useMemo } from "react";
+import React, { ReactElement, useMemo } from "react";
 
 import classes from "../PersonalContactInfo/ContactInfo.module.css";
 import ListItemComponent from "../../ListComponent/ListComponent";
@@ -15,9 +15,9 @@ import { ResumeBlocks } from "../../Content/useContent";
  *
  * @return {*} JSX.Element
  */
-const Languages: React.FC<ResumeBlocks> = ({
+const Languages: React.FC<Partial<ResumeBlocks>> = ({
   Languages,
-}): JSX.Element | null => {
+}): ReactElement | null => {
   const list = useMemo(() => {
     const array = [];
 

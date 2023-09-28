@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React, { useMemo } from "react";
+import React, { ReactElement, useMemo } from "react";
 
 import classes from "./ContactInfo.module.css";
 import ListItemComponent from "../../ListComponent/ListComponent";
@@ -16,9 +16,9 @@ import { ResumeBlocks } from "../../Content/useContent";
  *
  * @return {*} JSX.Element
  */
-const PersonalContactInfo: React.FC<ContainerProps & ResumeBlocks> = ({
+const PersonalContactInfo: React.FC<ContainerProps & Partial<ResumeBlocks>> = ({
   contact_info,
-}): JSX.Element | null => {
+}): ReactElement | null => {
   const list = useMemo(() => {
     const array = [];
     if (contact_info) {
