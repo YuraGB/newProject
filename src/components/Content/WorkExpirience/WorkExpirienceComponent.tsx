@@ -15,7 +15,7 @@ const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
         const { job_name, duties, duration, projects } = details;
         const item = (
           <ListItemComponent
-            key={companyName}
+            key={job_name + duration}
             title={companyName}
             subStyles={classes.title}
           >
@@ -30,7 +30,7 @@ const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
                 <h5 className={classes.subTitle}>Projects:</h5>
                 <ul>
                   {projects.map((el: string) => (
-                    <a href={el} className={classes.url}>
+                    <a key={el} href={el} className={classes.url}>
                       {el}
                     </a>
                   ))}

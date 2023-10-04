@@ -1,8 +1,9 @@
 import { render, fireEvent, screen } from "@testing-library/react";
+import renderer from "react-test-renderer";
 import "@testing-library/jest-dom";
 import Layout from "./Layout";
 
-describe("Blocks", () => {
+describe("Layout tests", () => {
   const blocks = {
     Languages: "",
     skills: { test: "test" },
@@ -33,12 +34,20 @@ describe("Blocks", () => {
   test("Content wouldn't be rendered", () => {
     // @ts-ignore
     render(<Layout blocks={null} />);
+    // @ts-ignore
     expect(screen.queryByText("Yurii Hurianov")).toBeNull();
   });
 
   test("Content will be rendered", () => {
     // @ts-ignore
     render(<Layout blocks={blocks} />);
+    // @ts-ignore
     expect(screen.queryByText("Yurii Hurianov")).toBeInTheDocument();
+  });
+
+  test("match snapshots", () => {
+    // @ts-ignore
+    const tree = renderer.create(<Layout blocks={blocks} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

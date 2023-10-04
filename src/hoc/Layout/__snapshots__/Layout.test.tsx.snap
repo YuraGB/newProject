@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout tests match snapshots 1`] = `
+Array [
+  <div
+    className="print_wrapper"
+    onClick={[Function]}
+  >
+    <a
+      className="to_print"
+      href="#"
+    >
+      Print this out!
+    </a>
+  </div>,
+  <main
+    className="Main"
+  >
+    <section
+      className="Toolbar"
+    >
+      <section
+        className="Header"
+      >
+        <img
+          alt="yuhur_img"
+          src="profile.jpg"
+        />
+        <h1>
+          Yurii Hurianov
+        </h1>
+        <h5 />
+      </section>
+      <section
+        className="InfoArea"
+      >
+        <h5>
+          Languages
+        </h5>
+        <hr />
+        <h5>
+          Contact info
+        </h5>
+        <hr />
+        <section
+          className="socials"
+        >
+          <a
+            aria-label="test"
+            className="social-icon"
+            href="test"
+            style={
+              Object {
+                "display": "inline-block",
+                "height": "50px",
+                "overflow": "hidden",
+                "position": "relative",
+                "verticalAlign": "middle",
+                "width": "50px",
+              }
+            }
+          >
+            <div
+              className="social-container"
+              style={
+                Object {
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+            >
+              <svg
+                className="social-svg"
+                style={
+                  Object {
+                    "borderRadius": "50%",
+                    "fillRule": "evenodd",
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "top": 0,
+                    "width": "100%",
+                  }
+                }
+                viewBox="0 0 64 64"
+              >
+                <g
+                  className="social-svg-background"
+                  style={
+                    Object {
+                      "MozTransition": "fill 170ms ease-in-out",
+                      "OTransition": "fill 170ms ease-in-out",
+                      "WebkitTransition": "fill 170ms ease-in-out",
+                      "fill": "transparent",
+                      "msTransition": "fill 170ms ease-in-out",
+                      "transition": "fill 170ms ease-in-out",
+                    }
+                  }
+                >
+                  <circle
+                    cx="32"
+                    cy="32"
+                    r="31"
+                  />
+                </g>
+                <g
+                  className="social-svg-icon"
+                  style={
+                    Object {
+                      "MozTransition": "fill 170ms ease-in-out",
+                      "OTransition": "fill 170ms ease-in-out",
+                      "WebkitTransition": "fill 170ms ease-in-out",
+                      "fill": "transparent",
+                      "msTransition": "fill 170ms ease-in-out",
+                      "transition": "fill 170ms ease-in-out",
+                    }
+                  }
+                >
+                  <path
+                    d={null}
+                  />
+                </g>
+                <g
+                  className="social-svg-mask"
+                  style={
+                    Object {
+                      "MozTransition": "fill 170ms ease-in-out",
+                      "OTransition": "fill 170ms ease-in-out",
+                      "WebkitTransition": "fill 170ms ease-in-out",
+                      "fill": null,
+                      "msTransition": "fill 170ms ease-in-out",
+                      "transition": "fill 170ms ease-in-out",
+                    }
+                  }
+                >
+                  <path
+                    d={null}
+                  />
+                </g>
+              </svg>
+            </div>
+          </a>
+        </section>
+      </section>
+      <footer
+        className="footer"
+      >
+        <span>
+          © copyright
+        </span>
+        <a
+          href="https://github.com/YuraGB/newProject"
+        >
+          This project is on the Github
+        </a>
+      </footer>
+    </section>
+  </main>,
+]
+`;
