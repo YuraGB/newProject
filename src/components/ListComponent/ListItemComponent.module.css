@@ -8,4 +8,5 @@
 
 .title {
     min-width: 40%;
+    text-transform: capitalize;
 }

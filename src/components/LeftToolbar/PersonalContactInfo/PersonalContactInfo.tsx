@@ -4,46 +4,28 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React from 'react';
+import React, { ReactElement } from "react";
 
-import classes from './ContactInfo.module.css'
-import ListItemComponent from "../../ListComponent/ListComponent";
-
-interface IContactInfo {
-    mobile: string
-    email: string
-}
-
-const personalInfo: IContactInfo =
-    {
-        mobile: '0673996678',
-        email: 'yuhur1985@gmail.com'
-    };
-
+import classes from "./ContactInfo.module.css";
+import { ContainerProps } from "../../../hoc/types";
+import { ResumeBlocks } from "../../Content/useContent";
+import { getList } from "../../../util/helper";
 
 /**
  * PersonalContactInfo
  *
  * @return {*} JSX.Element
  */
-const PersonalContactInfo: React.FC = (): JSX.Element => {
-    let list = [];
+const PersonalContactInfo: React.FC<ContainerProps & Partial<ResumeBlocks>> = ({
+  contact_info,
+}): ReactElement | null => {
+  const list: React.ReactElement[] = getList(contact_info, classes);
 
-    for (let [key, value] of Object.entries(personalInfo)) {
-        list.push(
-            <ListItemComponent key={key} title={key} subStyles={classes.title}>
-                <div className={classes.info}>
-                    <span>{value}</span>
-                </div>
-            </ListItemComponent>
-        );
-    }
+  if (!contact_info) {
+    return null;
+  }
 
-    return (
-        <ul className={classes.ContactList}>
-            {list}
-        </ul>
-    );
+  return <ul className={classes.ContactList}>{list}</ul>;
 };
 
 export default PersonalContactInfo;

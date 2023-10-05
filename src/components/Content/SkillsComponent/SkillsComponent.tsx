@@ -4,40 +4,29 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React from 'react';
+import React, { ReactElement } from "react";
 
-import classes from './Skills.module.css';
+import classes from "./Skills.module.css";
 import ContentSection from "../ContentSection/ContentSection";
-import ListItemComponent from "../../ListComponent/ListComponent";
-import skills from './skillsState';
+import { IResumeBlocks } from "../useContent";
+import { ContainerProps } from "../../../hoc/types";
+import { getList } from "../../../util/helper";
 
 /**
  * SkillsComponent
  *
  * @return {*} JSX.Element
  */
-const SkillsComponent: React.FC = (): JSX.Element => {
-    let list = [];
+const SkillsComponent: React.FC<ContainerProps & Partial<IResumeBlocks>> = ({
+  skills,
+}): ReactElement => {
+  const list: React.ReactElement[] = getList(skills, classes);
 
-    for (let [key, value] of Object.entries(skills)) {
-        list.push(
-            <ListItemComponent key={key} title={key} subStyles={classes.title}>
-                <div className={classes.info}>
-                    <span>{value}</span>
-                </div>
-            </ListItemComponent>
-        );
-    }
-
-    return (
-        <ContentSection title='Skills'>
-            <ul className={classes.Skills}>
-                {list}
-            </ul>
-            <h5>Familiar</h5>
-            <p>Canvas, Svg, Angular(5), React-Native</p>
-        </ContentSection>
-    )
+  return (
+    <ContentSection title="Skills">
+      <ul className={classes.Skills}>{list}</ul>
+    </ContentSection>
+  );
 };
 
 export default SkillsComponent;
