@@ -7,7 +7,7 @@ import { IResumeBlocks } from "../../Content/useContent";
 const SocialsComponent: React.FC<Partial<IResumeBlocks>> = ({
   social_links,
 }): JSX.Element | null => {
-  const list = useMemo(() => {
+  const list: React.ReactElement[] = useMemo(() => {
     const array: JSX.Element[] = [];
 
     if (social_links) {

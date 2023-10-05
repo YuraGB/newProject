@@ -8,6 +8,10 @@
 
 .info {
     flex-grow: 1;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    width: 50%;
 }
 
 .info a {

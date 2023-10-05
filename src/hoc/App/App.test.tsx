@@ -1,12 +1,8 @@
 import React from "react";
-import {
-  screen,
-  render,
-  act,
-  renderHook,
-  waitFor,
-} from "@testing-library/react";
+import { screen, render, waitFor } from "@testing-library/react";
 import App from "./App";
+import Resume from "../../DataBase/database_connection";
+import { IResumeBlocks } from "../../components/Content/useContent";
 
 describe("App tests", () => {
   test("The first loading will not have any data", async () => {
@@ -14,7 +10,7 @@ describe("App tests", () => {
     const promise = Promise.resolve();
     render(<App />);
 
-    //
+    // first render will be Spinner
     // @ts-ignore
     const fullName = screen.queryByText("Yurii Hurianov");
 
@@ -22,10 +18,16 @@ describe("App tests", () => {
     await promise;
   });
 
-  test("App loads resume data", async () => {
-    const { container } = render(<App />);
+  test("App renders all data", async () => {
+    render(<App />);
+
     await waitFor(() => {
-      expect(container).not.toBeNull();
+      expect(screen.queryByText("Education")).toBeInTheDocument();
     });
+  });
+
+  test("fetch data", async () => {
+    const getBlocks: string | IResumeBlocks[] = await Resume;
+    expect(JSON.stringify(getBlocks)).toContain("Hurianov");
   });
 });

@@ -4,13 +4,14 @@ import ContentSection from "../ContentSection/ContentSection";
 import classes from "./WorkComponent.module.css";
 import ListItemComponent from "../../ListComponent/ListComponent";
 import { IResumeBlocks } from "../useContent";
+import { getLink } from "../../../util/helper";
 
 const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
   work_experience,
 }): ReactElement | null => {
-  const list = useMemo(() => {
+  const list: React.ReactElement[] = useMemo(() => {
+    const array: ReactElement[] = [];
     if (work_experience) {
-      const array: ReactElement[] = [];
       for (const [companyName, details] of Object.entries(work_experience)) {
         const { job_name, duties, duration, projects } = details;
         const item = (
@@ -28,13 +29,7 @@ const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
             {projects && (
               <div className={classes.projects}>
                 <h5 className={classes.subTitle}>Projects:</h5>
-                <ul>
-                  {projects.map((el: string) => (
-                    <a key={el} href={el} className={classes.url}>
-                      {el}
-                    </a>
-                  ))}
-                </ul>
+                <ul>{projects.map((el) => getLink(el, classes))}</ul>
               </div>
             )}
           </ListItemComponent>
@@ -42,11 +37,8 @@ const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
 
         array.push(item);
       }
-
-      return array;
     }
-
-    return null;
+    return array;
   }, [work_experience]);
 
   return (

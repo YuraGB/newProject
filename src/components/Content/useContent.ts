@@ -52,7 +52,7 @@ export type ResumeBlocks = {
 export interface IResumeBlocks extends ResumeBlocks {
   skills: BlockDefault;
   social_links: BlockDefault;
-  Education: IEducationItem[];
+  Education: BlockDefault;
   profile: ProfileItem;
   work_experience: WorkBlock;
 }

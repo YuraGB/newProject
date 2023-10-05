@@ -1,4 +1,4 @@
-import { render, fireEvent, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import renderer from "react-test-renderer";
 import "@testing-library/jest-dom";
 import Layout from "./Layout";
@@ -38,7 +38,13 @@ describe("Layout tests", () => {
     expect(screen.queryByText("Yurii Hurianov")).toBeNull();
   });
 
-  test("Content will be rendered", () => {
+  test("the full name is in document", () => {
+    // @ts-ignore
+    render(<Layout blocks={blocks} />);
+    expect(screen.queryByText("Yurii Hurianov")).toBeInTheDocument();
+  });
+
+  test("the full name is in document2", () => {
     // @ts-ignore
     render(<Layout blocks={blocks} />);
     // @ts-ignore

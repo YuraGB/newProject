@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutMeComponent tests match snapshots about me component 1`] = `
+<section
+  className="Section"
+>
+  <h5>
+    About Me
+  </h5>
+  <hr />
+  <p>
+    test string for about me component
+  </p>
+</section>
+`;

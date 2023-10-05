@@ -9,8 +9,8 @@ import React, { ReactElement } from "react";
 import classes from "./ContentSection.module.css";
 
 type Props = {
-  children: ReactElement | ReactElement[] | null;
-  title: string | undefined;
+  children?: ReactElement | ReactElement[] | null;
+  title?: string | undefined;
 };
 
 /**
@@ -20,7 +20,13 @@ type Props = {
  * @param title
  * @return {*} JSX.Element
  */
-const ContentSection: React.FC<Props> = ({ children, title }): ReactElement => {
+const ContentSection: React.FC<Props> = ({
+  children,
+  title = "",
+}): ReactElement | null => {
+  if (!children && !title) {
+    return null;
+  }
   return (
     <section className={classes.Section}>
       <h5>{title}</h5>

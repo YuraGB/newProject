@@ -4,12 +4,12 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React, { ReactElement, useMemo } from "react";
+import React, { ReactElement } from "react";
 
 import classes from "./ContactInfo.module.css";
-import ListItemComponent from "../../ListComponent/ListComponent";
 import { ContainerProps } from "../../../hoc/types";
 import { ResumeBlocks } from "../../Content/useContent";
+import { getList } from "../../../util/helper";
 
 /**
  * PersonalContactInfo
@@ -19,21 +19,7 @@ import { ResumeBlocks } from "../../Content/useContent";
 const PersonalContactInfo: React.FC<ContainerProps & Partial<ResumeBlocks>> = ({
   contact_info,
 }): ReactElement | null => {
-  const list = useMemo(() => {
-    const array = [];
-    if (contact_info) {
-      for (const [key, value] of Object.entries(contact_info)) {
-        array.push(
-          <ListItemComponent key={key} title={key} subStyles={classes.title}>
-            <div className={classes.info}>
-              <span>{value}</span>
-            </div>
-          </ListItemComponent>
-        );
-      }
-    }
-    return array;
-  }, []);
+  const list: React.ReactElement[] = getList(contact_info, classes);
 
   if (!contact_info) {
     return null;
