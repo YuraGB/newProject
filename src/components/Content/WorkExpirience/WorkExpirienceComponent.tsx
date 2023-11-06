@@ -3,8 +3,8 @@ import React, { ReactElement, useMemo } from "react";
 import ContentSection from "../ContentSection/ContentSection";
 import classes from "./WorkComponent.module.css";
 import ListItemComponent from "../../ListComponent/ListComponent";
-import { IResumeBlocks } from "../useContent";
-import { getLink } from "../../../util/helper";
+import { IResumeBlocks, WorkBlock } from "../useContent";
+import { getLink, sortByDuration, sortObject } from "../../../util/helper";
 
 const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
   work_experience,
@@ -12,7 +12,8 @@ const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
   const list: React.ReactElement[] = useMemo(() => {
     const array: ReactElement[] = [];
     if (work_experience) {
-      for (const [companyName, details] of Object.entries(work_experience)) {
+      const work = sortObject(work_experience, sortByDuration);
+      for (const [companyName, details] of Object.entries(work)) {
         const { job_name, duties, duration, projects } = details;
         const item = (
           <ListItemComponent
@@ -29,7 +30,7 @@ const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
             {projects && (
               <div className={classes.projects}>
                 <h5 className={classes.subTitle}>Projects:</h5>
-                <ul>{projects.map((el) => getLink(el, classes))}</ul>
+                <ul>{projects.map((el: string) => getLink(el, classes))}</ul>
               </div>
             )}
           </ListItemComponent>

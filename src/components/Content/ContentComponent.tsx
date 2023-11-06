@@ -4,7 +4,7 @@
  * @author Yurii Huriianov <yuhur1985@gmail.com
  * @copyright 2020
  */
-import React, { ReactElement } from "react";
+import React, { ReactElement, useEffect } from "react";
 
 import AboutMeComponent from "./AboutMeComponent/AboutMeComponent";
 import SkillsComponent from "./SkillsComponent/SkillsComponent";
@@ -24,6 +24,7 @@ const ContentComponent: React.FC<PropsResumeBlocks> = ({
   blocks,
 }): ReactElement => {
   const { about_me, skills, work_experience, Education } = blocks;
+
   return (
     <section className={classes.Content}>
       <AboutMeComponent about_me={about_me} />
@@ -35,4 +36,4 @@ const ContentComponent: React.FC<PropsResumeBlocks> = ({
   );
 };
 
-export default ContentComponent;
+export default React.memo(ContentComponent);

@@ -65,7 +65,6 @@ export const useContent = () => {
   const [blocks, setBlocks] = useState<IResumeBlocks | string | null>(null);
   void useMemo(async () => {
     const getBlocks: string | IResumeBlocks[] = await Resume;
-
     if (Array.isArray(getBlocks)) {
       setBlocks(getBlocks[0]);
     }

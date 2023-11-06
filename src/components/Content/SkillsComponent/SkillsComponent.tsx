@@ -10,7 +10,7 @@ import classes from "./Skills.module.css";
 import ContentSection from "../ContentSection/ContentSection";
 import { IResumeBlocks } from "../useContent";
 import { ContainerProps } from "../../../hoc/types";
-import { getList } from "../../../util/helper";
+import { getList, sortObject } from "../../../util/helper";
 
 /**
  * SkillsComponent
@@ -20,7 +20,11 @@ import { getList } from "../../../util/helper";
 const SkillsComponent: React.FC<ContainerProps & Partial<IResumeBlocks>> = ({
   skills,
 }): ReactElement => {
-  const list: React.ReactElement[] = getList(skills, classes);
+  let list: ReactElement[] = [];
+
+  if (skills) {
+    list = getList(sortObject(skills), classes);
+  }
 
   return (
     <ContentSection title="Skills">
