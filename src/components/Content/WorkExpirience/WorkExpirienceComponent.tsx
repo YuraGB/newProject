@@ -3,7 +3,7 @@ import React, { ReactElement, useMemo } from "react";
 import ContentSection from "../ContentSection/ContentSection";
 import classes from "./WorkComponent.module.css";
 import ListItemComponent from "../../ListComponent/ListComponent";
-import { IResumeBlocks, WorkBlock } from "../useContent";
+import { IResumeBlocks } from "../useContent";
 import { getLink, sortByDuration, sortObject } from "../../../util/helper";
 
 const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({

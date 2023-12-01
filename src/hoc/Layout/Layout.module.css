@@ -8,12 +8,12 @@
     display: grid;
     grid-template-areas: "toolbar content";
     grid-template-rows: 1fr;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 /*Mobile*/
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .Main {
         grid-template-areas: "content";
         grid-template-columns: 100%;
@@ -71,3 +71,5 @@
         grid-template-columns: 40% 1fr;
     }
 }
+
+@media print { html, body { height: initial !important; overflow: initial !important; }}
