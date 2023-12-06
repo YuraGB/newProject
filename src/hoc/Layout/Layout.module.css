@@ -72,4 +72,19 @@
     }
 }
 
-@media print { html, body { height: initial !important; overflow: initial !important; }}
+@media print {
+    html, body {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .print_wrapper {
+        display: none;
+    }
+
+    .Main {
+        box-shadow: none;
+        margin: 0;
+    }
+}

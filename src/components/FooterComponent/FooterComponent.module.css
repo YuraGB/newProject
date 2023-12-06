@@ -18,3 +18,10 @@
     color: grey;
     font-size: 12px;
 }
+
+
+@media print {
+    .footer {
+        display: none;
+    }
+}

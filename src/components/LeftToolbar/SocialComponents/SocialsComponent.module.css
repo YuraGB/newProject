@@ -1,3 +1,9 @@
 .socials a {
     margin-right: 10px;
 }
+
+@media print {
+    .socials {
+        display: none;
+    }
+}
