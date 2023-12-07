@@ -14,7 +14,8 @@ import { getList } from "../../../util/helper";
 /**
  * PersonalContactInfo
  *
- * @return {*} JSX.Element
+ * @param contact_info
+ * @return {React.ReactElement}
  */
 const PersonalContactInfo: React.FC<ContainerProps & Partial<ResumeBlocks>> = ({
   contact_info,

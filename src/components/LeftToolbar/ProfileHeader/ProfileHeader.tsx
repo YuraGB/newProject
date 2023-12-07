@@ -25,7 +25,7 @@ const ProfileHeader: React.FC<ContainerProps & Partial<IResumeBlocks>> = ({
   const { first_name = "", last_name = "", sub_title = "" } = profile;
   return (
     <section className={classes.Header}>
-      <img src={profileImg} alt="yuhur_img" />
+      {/*<img src={profileImg} alt="yuhur_img" />*/}
       <h1>{`${first_name} ${last_name}`}</h1>
       <h5>{sub_title}</h5>
     </section>

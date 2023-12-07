@@ -7,7 +7,7 @@
 import React, { ReactElement } from "react";
 
 import classes from "./LeftToolbar.module.css";
-// import ProfileHeader from "./ProfileHeader/ProfileHeader";
+import ProfileHeader from "./ProfileHeader/ProfileHeader";
 import ProfileInfoComponent from "./ProfileInfoComponent/ProfileInfoComponent";
 import FooterComponent from "../FooterComponent/FooterComponent";
 import { ContainerProps } from "../../hoc/types";
@@ -29,7 +29,7 @@ const LeftToolbar: React.FC<ContainerProps & PropsResumeBlocks> = ({
 
   return (
     <section className={classes.Toolbar}>
-      {/*<ProfileHeader profile={profile} />*/}
+      <ProfileHeader profile={profile} />
       <AboutMeComponent about_me={about_me} />
       <ProfileInfoComponent
         Languages={Languages}

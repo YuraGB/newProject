@@ -38,7 +38,7 @@ const Layout: React.FC<ContainerProps & PropsResumeBlocks> = ({
             </div>
           );
         }}
-        documentTitle={"FUXCK"}
+        documentTitle={"CV"}
         content={() => ref.current}
         pageStyle={classes.print}
         bodyClass={classes.print}
