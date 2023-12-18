@@ -10,6 +10,7 @@
 
 .title {
     text-decoration: underline;
+    text-underline-offset: 2px;
     width: 50%;
     min-width: auto;
 }

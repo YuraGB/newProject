@@ -1,9 +1,10 @@
 .Section {
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     font-size: 14px;
 }
 
 .Section h5 {
-    margin-bottom: 1em;
+    margin-bottom: 0;
     font-size: 16px;
+    margin-top: 18px;
 }

@@ -27,8 +27,8 @@ const ContentComponent: React.FC<PropsResumeBlocks> = ({
 
   return (
     <section className={classes.Content}>
-      <SkillsComponent skills={skills} />
       <WorkExpirienceComponent work_experience={work_experience} />
+      <SkillsComponent skills={skills} />
       <EducationComponent Education={Education} />
       <FooterComponent />
     </section>

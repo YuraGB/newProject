@@ -8,6 +8,7 @@
     text-decoration: underline;
     font-weight: bold;
     font-size: 15px;
+    text-underline-offset: 3px
 }
 
 .info {
@@ -18,7 +19,23 @@
 }
 
 .projects {
-    padding: 0 0 1em 0;
+    padding: 0 0 0.5em 0;
+}
+
+.dutyList {
+    margin-top: 20px;
+    max-height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: space-between;
+    list-style: square;
+}
+
+.dutyList li {
+    max-width: 45%;
+    margin-left: 15px;
 }
 
 h5.subTitle {

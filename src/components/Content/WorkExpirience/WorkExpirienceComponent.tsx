@@ -5,6 +5,7 @@ import classes from "./WorkComponent.module.css";
 import ListItemComponent from "../../ListComponent/ListComponent";
 import { IResumeBlocks } from "../useContent";
 import { getLink, sortByDuration, sortObject } from "../../../util/helper";
+import { ListOfDuties } from "./component/ListOfDuties";
 
 const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
   work_experience,
@@ -25,7 +26,8 @@ const WorkExpirienceComponent: React.FC<Partial<IResumeBlocks>> = ({
               <span className={classes.jobName}>{job_name}</span>
               <span className={classes.period}>{duration}</span>
             </div>
-            {duties && <p className={classes.duties}>{duties.join(", ")}</p>}
+
+            <ListOfDuties list={duties} />
 
             {projects && (
               <div className={classes.projects}>
